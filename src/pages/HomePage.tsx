@@ -107,80 +107,73 @@ export default function HomePage() {
             <TabsTrigger value="accounts">Cuentas</TabsTrigger>
           </TabsList>
 
-          <AnimatePresence mode="wait">
-            {activeTab === "cards" && (
-              <motion.div
-                key="cards"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-              >
-                <TabsContent value="cards" className="mt-0">
-                  <CardCarousel cards={cards} onCardChange={onCardChange} />
+          <TabsContent value="cards" className="mt-0">
+            {/* Animación opcional, solo visual */}
+            <motion.div
+              key="cards"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <CardCarousel cards={cards} onCardChange={onCardChange} />
 
-                  <div className="mt-6 space-y-4">
-                    <Card className="p-4 rounded-xl border border-gray-100 card-shadow">
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <h3 className="font-medium">Últimos movimientos</h3>
-                          <p className="text-xs text-gray-500">Tarjeta {selectedCard.type}</p>
-                        </div>
-                        <Button variant="ghost" size="sm" className="text-[#8ACE00]">
-                          <span className="text-xs">Ver todos</span>
-                          <ChevronRight className="h-4 w-4 ml-1" />
-                        </Button>
-                      </div>
-                    </Card>
-
-                    <Card className="p-4 rounded-xl border border-gray-100 card-shadow">
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <h3 className="font-medium">Límites de tarjeta</h3>
-                          <p className="text-xs text-gray-500">Gestiona tus límites</p>
-                        </div>
-                        <Button variant="ghost" size="sm" className="text-[#8ACE00]">
-                          <span className="text-xs">Ajustar</span>
-                          <ChevronRight className="h-4 w-4 ml-1" />
-                        </Button>
-                      </div>
-                    </Card>
-                  </div>
-                </TabsContent>
-              </motion.div>
-            )}
-
-            {activeTab === "accounts" && (
-              <motion.div
-                key="accounts"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-              >
-                <TabsContent value="accounts" className="mt-0">
-                  <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-lg font-semibold">Tus cuentas</h2>
+              <div className="mt-6 space-y-4">
+                <Card className="p-4 rounded-xl border border-gray-100 card-shadow">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h3 className="font-medium">Últimos movimientos</h3>
+                      <p className="text-xs text-gray-500">Tarjeta {selectedCard.type}</p>
+                    </div>
                     <Button variant="ghost" size="sm" className="text-[#8ACE00]">
-                      <PlusCircle className="h-4 w-4 mr-1" />
-                      <span className="text-xs">Nueva</span>
+                      <span className="text-xs">Ver todos</span>
+                      <ChevronRight className="h-4 w-4 ml-1" />
                     </Button>
                   </div>
+                </Card>
 
-                  <motion.div variants={container} initial="hidden" animate="show" className="space-y-3">
-                    {accounts.map((account) => (
-                      <motion.div key={account.id} variants={item}>
-                        <AccountCard account={account} />
-                      </motion.div>
-                    ))}
+                <Card className="p-4 rounded-xl border border-gray-100 card-shadow">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h3 className="font-medium">Límites de tarjeta</h3>
+                      <p className="text-xs text-gray-500">Gestiona tus límites</p>
+                    </div>
+                    <Button variant="ghost" size="sm" className="text-[#8ACE00]">
+                      <span className="text-xs">Ajustar</span>
+                      <ChevronRight className="h-4 w-4 ml-1" />
+                    </Button>
+                  </div>
+                </Card>
+              </div>
+            </motion.div>
+          </TabsContent>
+
+          <TabsContent value="accounts" className="mt-0">
+            <motion.div
+              key="accounts"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-lg font-semibold">Tus cuentas</h2>
+                <Button variant="ghost" size="sm" className="text-[#8ACE00]">
+                  <PlusCircle className="h-4 w-4 mr-1" />
+                  <span className="text-xs">Nueva</span>
+                </Button>
+              </div>
+
+              <motion.div variants={container} initial="hidden" animate="show" className="space-y-3">
+                {accounts.map((account) => (
+                  <motion.div key={account.id} variants={item}>
+                    <AccountCard account={account} />
                   </motion.div>
-                </TabsContent>
+                ))}
               </motion.div>
-            )}
-          </AnimatePresence>
+            </motion.div>
+          </TabsContent>
         </Tabs>
+
       </div>
     </div>
   )
 }
-
