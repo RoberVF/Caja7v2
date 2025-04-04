@@ -1,12 +1,12 @@
 "use client"
 
 import { useState, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { Card } from "../components/ui/card"
 import { Button } from "../components/ui/button"
 import { PlusCircle, Bell, ChevronRight } from "lucide-react"
 import AccountCard from "../components/account-card"
-import CardCarousel from "../components/card-carousel"
+import CardCarousel, { Card as CardType } from "../components/card-carousel"
 import AccountSummary from "../components/account-summary"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs"
 
@@ -70,7 +70,7 @@ export default function HomePage() {
     show: { opacity: 1, y: 0 },
   }
 
-  const onCardChange = useCallback((card) => {
+  const onCardChange = useCallback((card: CardType) => {
     setSelectedCard(card)
   }, [])
 

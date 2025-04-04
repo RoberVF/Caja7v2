@@ -47,6 +47,8 @@ export default function GastosPage() {
     },
   }
 
+  const [activeTab, setActiveTab] = useState("mensual");
+
   return (
     <div className="px-4 sm:px-6 md:px-8 pt-6 max-w-2xl mx-auto">
       <motion.div
@@ -59,7 +61,7 @@ export default function GastosPage() {
         <p className="text-gray-500 text-sm">Análisis de tus gastos</p>
       </motion.div>
 
-      <Tabs defaultValue="mensual" className="mb-8">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-8">
         <div className="flex justify-between items-center mb-4">
           <TabsList className="bg-gray-100">
             <TabsTrigger value="semanal" className="text-xs">

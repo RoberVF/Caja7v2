@@ -3,7 +3,7 @@ import { motion, AnimatePresence, type PanInfo } from "framer-motion";
 import { ChevronLeft, ChevronRight, CreditCard } from 'lucide-react';
 import { Button } from "./ui/button";
 
-interface Card {
+export interface Card {
   id: number;
   type: string;
   number: string;
@@ -20,7 +20,7 @@ interface CardCarouselProps {
 export default function CardCarousel({ cards, onCardChange }: CardCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
+  // const [isDragging, setIsDragging] = useState(false);
   const constraintsRef = useRef(null);
 
   useEffect(() => {
@@ -39,8 +39,8 @@ export default function CardCarousel({ cards, onCardChange }: CardCarouselProps)
     setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
   };
 
-  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-    setIsDragging(false);
+  const handleDragEnd = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    // setIsDragging(false);
     const threshold = 100;
     if (info.offset.x < -threshold) {
       handleNext();
@@ -106,7 +106,8 @@ export default function CardCarousel({ cards, onCardChange }: CardCarouselProps)
             drag="x"
             dragConstraints={constraintsRef}
             dragElastic={0.1}
-            onDragStart={() => setIsDragging(true)}
+            // onDragStart={() => setIsDragging(true)}
+            onDragStart={() => {}}
             onDragEnd={handleDragEnd}
             className="absolute w-full max-w-xs sm:max-w-sm"
           >
