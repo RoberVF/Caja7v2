@@ -9,8 +9,11 @@ import AccountCard from "../components/account-card"
 import CardCarousel, { Card as CardType } from "../components/card-carousel"
 import AccountSummary from "../components/account-summary"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs"
+import { useLocation } from "react-router-dom";
 
 export default function HomePage() {
+  const location = useLocation()
+
   const [selectedCard, setSelectedCard] = useState({
     id: 1,
     type: "Visa Débito",
@@ -115,7 +118,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <CardCarousel cards={cards} onCardChange={onCardChange} />
+              {/* <CardCarousel key={location.pathname} cards={cards} onCardChange={onCardChange} /> */}
 
               <div className="mt-6 space-y-4">
                 <Card className="p-4 rounded-xl border border-gray-100 card-shadow">
