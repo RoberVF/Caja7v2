@@ -1,6 +1,6 @@
 "use client"
 
-import { useState} from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card } from "../components/ui/card"
 import { Button } from "../components/ui/button"
@@ -14,32 +14,32 @@ import { CreditCardCarousel } from "../components/credit-card-carousel"
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("cards")
 
-  // const cards = [
-  //   {
-  //     id: 1,
-  //     type: "Visa Débito",
-  //     number: "**** **** **** 5678",
-  //     expiry: "05/28",
-  //     balance: "€2,547.80",
-  //     color: "bg-gradient-to-br from-[#8ACE00] to-[#7AB800]",
-  //   },
-  //   {
-  //     id: 2,
-  //     type: "Mastercard Oro",
-  //     number: "**** **** **** 1234",
-  //     expiry: "09/26",
-  //     balance: "€8,942.15",
-  //     color: "bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8]",
-  //   },
-  //   {
-  //     id: 3,
-  //     type: "American Express",
-  //     number: "**** **** **** 9012",
-  //     expiry: "12/27",
-  //     balance: "€4,271.33",
-  //     color: "bg-gradient-to-br from-[#6366F1] to-[#4338CA]",
-  //   },
-  // ]
+  const cards = [
+    {
+      id: 1,
+      type: "Visa Débito",
+      number: "**** **** **** 5678",
+      expiry: "05/28",
+      balance: "€2,547.80",
+      color: "bg-gradient-to-br from-[#8ACE00] to-[#7AB800]",
+    },
+    {
+      id: 2,
+      type: "Mastercard Oro",
+      number: "**** **** **** 1234",
+      expiry: "09/26",
+      balance: "€8,942.15",
+      color: "bg-gradient-to-br from-[#3B82F6] to-[#1D4ED8]",
+    },
+    {
+      id: 3,
+      type: "American Express",
+      number: "**** **** **** 9012",
+      expiry: "12/27",
+      balance: "€4,271.33",
+      color: "bg-gradient-to-br from-[#6366F1] to-[#4338CA]",
+    },
+  ]
 
   const accounts = [
     { id: 1, name: "Cuenta Principal", balance: "€2,547.80", lastMovement: "Hoy", type: "Corriente" },
@@ -104,14 +104,15 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
             >
-              
-              <CreditCardCarousel/>
+
+              <div className="flex items-center justify-center">
+                <CreditCardCarousel cards={cards} />
+              </div>
               <div className="mt-6 space-y-4">
                 <Card className="p-4 rounded-xl border border-gray-100 card-shadow">
                   <div className="flex justify-between items-center">
                     <div>
                       <h3 className="font-medium">Últimos movimientos</h3>
-                      {/* <p className="text-xs text-gray-500">Tarjeta {selectedCard.type}</p> */}
                     </div>
                     <Button variant="ghost" size="sm" className="text-[#8ACE00]">
                       <span className="text-xs">Ver todos</span>

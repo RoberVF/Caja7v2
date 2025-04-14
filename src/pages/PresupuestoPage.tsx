@@ -140,10 +140,6 @@ export default function PresupuestoPage() {
                 €2,100 <span className="text-sm font-normal text-gray-500">/ mes</span>
               </h2>
             </div>
-            <Button variant="outline" size="sm" className="rounded-lg h-8">
-              <PlusCircle className="h-4 w-4 mr-1" />
-              <span className="text-xs">Nuevo</span>
-            </Button>
           </div>
 
           <div className="space-y-1">

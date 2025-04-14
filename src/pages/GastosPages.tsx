@@ -64,15 +64,13 @@ export default function GastosPage() {
       <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-8">
         <div className="flex justify-between items-center mb-4">
           <TabsList className="bg-gray-100">
-            <TabsTrigger value="semanal" className="text-xs">
+            {/* <TabsTrigger value="semanal" className="text-xs">
               Semanal
-            </TabsTrigger>
+            </TabsTrigger> */}
             <TabsTrigger value="mensual" className="text-xs">
               Mensual
             </TabsTrigger>
-            <TabsTrigger value="anual" className="text-xs">
-              Anual
-            </TabsTrigger>
+            
           </TabsList>
 
           <div className="flex space-x-1">

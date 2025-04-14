@@ -28,7 +28,6 @@ export default function AccountSummary({
       className="w-full"
     >
       <Card className="card-gradient text-white p-6 rounded-xl overflow-hidden relative">
-        {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full">
           <motion.div 
             className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white opacity-10"
@@ -71,10 +70,10 @@ export default function AccountSummary({
                 {totalBalance}
               </motion.h2>
             </div>
-            <Button variant="ghost" size="sm" className="text-white bg-white/20 hover:bg-white/30 rounded-lg px-3 py-1 h-auto">
+            {/* <Button variant="ghost" size="sm" className="text-white bg-white/20 hover:bg-white/30 rounded-lg px-3 py-1 h-auto">
               <ArrowUpRight className="h-4 w-4 mr-1" />
               <span className="text-xs">Ver análisis</span>
-            </Button>
+            </Button> */}
           </div>
           
           <div className="flex justify-between items-center">
@@ -102,7 +101,7 @@ export default function AccountSummary({
               </div>
             </motion.div>
             
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
@@ -115,7 +114,7 @@ export default function AccountSummary({
                   {isPositiveChange ? '+' : ''}{percentageChange}%
                 </p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </Card>
