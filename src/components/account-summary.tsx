@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
-import { ArrowUpRight, TrendingUp, TrendingDown } from 'lucide-react';
-import { Button } from "./ui/button";
+import { TrendingUp, TrendingDown } from 'lucide-react';
 
 interface AccountSummaryProps {
   totalBalance: string;
@@ -15,10 +14,8 @@ export default function AccountSummary({
   totalBalance,
   monthlyIncome,
   monthlyExpenses,
-  percentageChange,
   month
 }: AccountSummaryProps) {
-  const isPositiveChange = percentageChange >= 0;
   
   return (
     <motion.div

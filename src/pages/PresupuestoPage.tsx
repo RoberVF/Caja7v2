@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Card } from "../components/ui/card"
 import { Button } from "../components/ui/button"
 import { Progress } from "../components/ui/progress"
-import { PlusCircle, TrendingUp, AlertCircle, ChevronRight } from "lucide-react"
+import { TrendingUp, AlertCircle, ChevronRight } from "lucide-react"
 
 export default function PresupuestoPage() {
   const [expandedBudget, setExpandedBudget] = useState<number | null>(null)
