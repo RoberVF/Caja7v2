@@ -20,6 +20,7 @@ interface CardCarouselProps {
 export default function CardCarousel({ cards, onCardChange }: CardCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  
   // const [isDragging, setIsDragging] = useState(false);
   const constraintsRef = useRef(null);
 
