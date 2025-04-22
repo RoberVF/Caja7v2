@@ -1,10 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion"
 import { Card } from "../components/ui/card"
 import { Button } from "../components/ui/button"
-import { PlusCircle, Bell, ChevronRight } from "lucide-react"
+import { PlusCircle, CircleDollarSign, ChevronRight } from "lucide-react"
 import AccountCard from "../components/account-card"
 import AccountSummary from "../components/account-summary"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs"
@@ -75,10 +76,11 @@ export default function HomePage() {
           <h1 className="text-2xl font-bold">Hola, Carlos</h1>
           <p className="text-gray-500 text-sm">Bienvenido de nuevo</p>
         </div>
-        <Button variant="ghost" size="icon" className="rounded-full relative">
-          <Bell className="h-5 w-5 text-gray-600" />
-          <span className="absolute top-0 right-0 h-2 w-2 bg-[#8ACE00] rounded-full"></span>
-        </Button>
+        <Link to="/tools/bizum">
+        <div className="flex items-center justify-center px-3 py-3 rounded-xl border border-gray-100 card-shadow bg-[#8ACE00] hover:bg-[#8ACE00] transition duration-200 ease-in-out">
+          <span className="text-gray-600 font-semibold text-sm mr-1 text-white">Bizum </span><CircleDollarSign className="h-5 w-5 text-white" />
+        </div>
+        </Link>
       </motion.div>
 
       <AccountSummary

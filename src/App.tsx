@@ -9,6 +9,7 @@ import AhorroInteligentePage from './pages/AhorroInteligentePage'
 import AjustesPage from './pages/AjustesPage'
 import PaybackPage from './pages/PaybackPage'
 import SplitPage from './pages/SplitPage'
+import BizumPage from './pages/BizumPage'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/tools/ahorro" element={< AhorroInteligentePage />} />
           <Route path="/tools/payback" element={< PaybackPage />} />
           <Route path="/tools/split" element={< SplitPage />} />
+          <Route path="/tools/bizum" element={< BizumPage />} />
           <Route path="/settings" element={< AjustesPage />} />
         </Routes>
       </main>

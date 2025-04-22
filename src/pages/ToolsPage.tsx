@@ -141,7 +141,7 @@ export default function ToolsPage() {
             </p>
 
             <div className="flex items-center">
-              <div className="flex -space-x-2">
+              <div className="flex space-x-1">
                 <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
                   <BarChart3 className="h-3 w-3 text-white" />
                 </div>
