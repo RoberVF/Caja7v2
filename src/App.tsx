@@ -10,6 +10,7 @@ import AjustesPage from './pages/AjustesPage'
 import PaybackPage from './pages/PaybackPage'
 import SplitPage from './pages/SplitPage'
 import BizumPage from './pages/BizumPage'
+import ExchangePage from './pages/ExchangePage'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/tools/payback" element={< PaybackPage />} />
           <Route path="/tools/split" element={< SplitPage />} />
           <Route path="/tools/bizum" element={< BizumPage />} />
+          <Route path="/tools/exchange" element={< ExchangePage />} />
           <Route path="/settings" element={< AjustesPage />} />
         </Routes>
       </main>

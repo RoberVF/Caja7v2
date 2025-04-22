@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Card } from "../components/ui/card"
-import { PieChart, ArrowUpDown, BarChart3, Wallet, Sparkles, ChevronRight, TrendingUp, ArchiveRestore, ArrowDownUp } from "lucide-react"
+import { PieChart, ArrowUpDown, BarChart3, Wallet, Sparkles, ChevronRight, TrendingUp, ArchiveRestore, ArrowDownUp, Landmark } from "lucide-react"
 
 export default function ToolsPage() {
   const [activeCard, setActiveCard] = useState<string | null>(null)
@@ -57,6 +57,14 @@ export default function ToolsPage() {
       icon: ArrowDownUp,
       color: "bg-gradient-to-br from-[#CA43210] to-[#B39240]",
       path: "/tools/split",
+    },
+    {
+      id: "exchange",
+      name: "Exchange",
+      description: "Invierte en los mejores activos financieros y realiza cambio de divisas sobre tu dinero",
+      icon: Landmark,
+      color: "bg-gradient-to-br from-[#AD2950] to-[#AD29140]",
+      path: "/tools/exchange",
     },
   ]
 
