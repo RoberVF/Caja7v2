@@ -74,7 +74,7 @@ export default function AjustesPage() {
   }
 
   return (
-    <div className="px-4 sm:px-6 md:px-8 pt-6 max-w-2xl mx-auto">
+    <div className="px-4 sm:px-6 md:px-8 pt-6 mx-auto">
       <motion.div
         className="mb-6"
         initial={{ opacity: 0, y: -20 }}
@@ -98,7 +98,7 @@ export default function AjustesPage() {
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6">
         <div className={`md:col-span-${showAsistente ? "2" : "3"}`}>
           <Tabs defaultValue="perfil" value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-4 mb-6">
