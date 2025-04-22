@@ -36,7 +36,7 @@ import {
   Briefcase,
 } from "lucide-react"
 
-export default function InversionesPage() {
+export default function ExchangePage() {
   const [activeTab, setActiveTab] = useState("cartera")
   const [selectedCurrency, setSelectedCurrency] = useState<string>("USD")
   const [amount, setAmount] = useState<string>("100")
