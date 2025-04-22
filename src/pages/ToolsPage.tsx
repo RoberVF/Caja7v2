@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Card } from "../components/ui/card"
-import { PieChart, ArrowUpDown, BarChart3, Wallet, Sparkles, ChevronRight, TrendingUp } from "lucide-react"
+import { PieChart, ArrowUpDown, BarChart3, Wallet, Sparkles, ChevronRight, TrendingUp, ArchiveRestore, ArrowDownUp } from "lucide-react"
 
 export default function ToolsPage() {
   const [activeCard, setActiveCard] = useState<string | null>(null)
@@ -41,6 +41,22 @@ export default function ToolsPage() {
       icon: Sparkles,
       color: "bg-gradient-to-br from-[#EC4899] to-[#BE185D]",
       path: "/tools/ahorro",
+    },
+    {
+      id: "payback",
+      name: "Payback",
+      description: "Consigue un reembolso porcentual con tus compras",
+      icon: ArchiveRestore,
+      color: "bg-gradient-to-br from-[#CA4332] to-[#CA1234]",
+      path: "/tools/payback",
+    },
+    {
+      id: "split",
+      name: "Split",
+      description: "Divide dinero entre usuarios o cuentas",
+      icon: ArrowDownUp,
+      color: "bg-gradient-to-br from-[#CA43210] to-[#B39240]",
+      path: "/tools/split",
     },
   ]
 

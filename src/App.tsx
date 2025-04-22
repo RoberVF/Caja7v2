@@ -7,6 +7,8 @@ import PresupuestoPage from './pages/PresupuestoPage'
 import ToolsPage from './pages/ToolsPage'
 import AhorroInteligentePage from './pages/AhorroInteligentePage'
 import AjustesPage from './pages/AjustesPage'
+import PaybackPage from './pages/PaybackPage'
+import SplitPage from './pages/SplitPage'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/tools/movimientos" element={<MovimientosPage />} />
           <Route path="/tools/presupuesto" element={<PresupuestoPage />} />
           <Route path="/tools/ahorro" element={< AhorroInteligentePage />} />
+          <Route path="/tools/payback" element={< PaybackPage />} />
+          <Route path="/tools/split" element={< SplitPage />} />
           <Route path="/settings" element={< AjustesPage />} />
         </Routes>
       </main>
