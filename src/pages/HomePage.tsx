@@ -254,9 +254,9 @@ export default function HomePage() {
                           </CarouselItem>
                         ))}
                       </CarouselContent>
-                      <div className="flex items-center justify-center mt-4">
+                      <div className="flex items-center justify-center mt-8">
                         <CarouselPrevious className="static transform-none mx-1 bg-white" />
-                        <div className="flex space-x-1">
+                        <div className="flex space-x-1 mt-8">
                           {cards.map((_, idx) => (
                             <div
                               key={idx}
