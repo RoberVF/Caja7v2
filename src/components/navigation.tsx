@@ -1,15 +1,14 @@
 import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CreditCard, PieChart, ArrowUpDown, BarChart3 } from 'lucide-react';
+import { CreditCard, ArrowUpDown, BarChart3 } from 'lucide-react';
 
 export default function Navigation() {
   const location = useLocation();
   
   const navItems = [
     { path: "/", label: "Cuentas", icon: CreditCard },
-    { path: "/gastos", label: "Gastos", icon: PieChart },
-    { path: "/movimientos", label: "Movimientos", icon: ArrowUpDown },
-    { path: "/presupuesto", label: "Presupuesto", icon: BarChart3 },
+    { path: "/tools", label: "7Tools", icon: BarChart3 },
+    { path: "/settings", label: "Ajustes", icon: ArrowUpDown },
   ];
 
   return (

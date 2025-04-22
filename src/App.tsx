@@ -4,6 +4,9 @@ import HomePage from './pages/HomePage'
 import GastosPage from './pages/GastosPages'
 import MovimientosPage from './pages/MovimientosPage'
 import PresupuestoPage from './pages/PresupuestoPage'
+import ToolsPage from './pages/ToolsPage'
+import AhorroInteligentePage from './pages/AhorroInteligentePage'
+import AjustesPage from './pages/AjustesPage'
 
 function App() {
   return (
@@ -11,9 +14,12 @@ function App() {
       <main className="flex-1 overflow-hidden pb-20">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/gastos" element={<GastosPage />} />
-          <Route path="/movimientos" element={<MovimientosPage />} />
-          <Route path="/presupuesto" element={<PresupuestoPage />} />
+          <Route path="/tools" element={<ToolsPage />} />
+          <Route path="/tools/gastos" element={<GastosPage />} />
+          <Route path="/tools/movimientos" element={<MovimientosPage />} />
+          <Route path="/tools/presupuesto" element={<PresupuestoPage />} />
+          <Route path="/tools/ahorro" element={< AhorroInteligentePage />} />
+          <Route path="/settings" element={< AjustesPage />} />
         </Routes>
       </main>
       <Navigation />
