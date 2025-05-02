@@ -49,6 +49,10 @@ El corazón de la aplicación es **7Tools**, un conjunto de herramientas financi
 
 - **Sistema de Payback:** Obtención de reembolsos instantáneos en compras realizadas en comercios asociados (por ejemplo, 3% de reembolso inmediato en Mercadona).
 
+- **Puntos Verdes:** Sistema de puntos canjeables por productos ecologicos.
+
+- **Promociones:** Promociones unicas por ser cliente y utilizar las tarjetas de la entidad.
+
 ---
 
 ## 🛠️ Sección de Ajustes
