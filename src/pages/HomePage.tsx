@@ -429,6 +429,33 @@ export default function HomePage() {
           </div>
         </Card>
       </motion.div>
+
+
+      {/* Huellas de carbono */}
+      <motion.div
+        className="mt-4 mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <Card className="p-4 rounded-xl border border-gray-100 card-shadow bg-gradient-to-r from-[#f0f9e8] to-[#e8f4fd]">
+          <div className="flex items-start">
+            <div className="w-10 h-10 rounded-full bg-[#8ACE00]/20 flex items-center justify-center mr-3 flex-shrink-0">
+              <Sparkles className="h-5 w-5 text-[#8ACE00]" />
+            </div>
+            <div>
+              <h3 className="font-medium text-sm">Informe ecológico mensual</h3>
+              <p className="text-xs text-gray-600 mt-1">
+                Tu huella de carbono ha disminuido un 15% este mes. ¡Sigue así!
+              </p>
+              <Button variant="ghost" size="sm" className="text-[#8ACE00] text-xs mt-2 h-7 px-2">
+                Saber más
+                <ChevronRight className="h-3 w-3 ml-1" />
+              </Button>
+            </div>
+          </div>
+        </Card>
+      </motion.div>
     </div>
   )
 }

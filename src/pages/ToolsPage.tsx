@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Card } from "../components/ui/card"
-import { PieChart, ArrowUpDown, BarChart3, Wallet, Sparkles, ChevronRight, TrendingUp, ArchiveRestore, ArrowDownUp, Landmark, BatteryFull } from "lucide-react"
+import { PieChart, ArrowUpDown, BarChart3, Wallet, Sparkles, ChevronRight, TrendingUp, ArchiveRestore, ArrowDownUp, Landmark, BatteryFull, TreeDeciduous } from "lucide-react"
 
 export default function ToolsPage() {
   const [activeCard, setActiveCard] = useState<string | null>(null)
@@ -73,6 +73,14 @@ export default function ToolsPage() {
       icon: BatteryFull,
       color: "bg-gradient-to-br from-[#9542F5] to-[#9542F5]",
       path: "/tools/promociones",
+    },
+    {
+      id: "ecologia",
+      name: "Puntos Verdes",
+      description: "Compra en negocios comprometidos con el medio ambiente y obtén recompensas impresionantes",
+      icon: TreeDeciduous,
+      color: "bg-gradient-to-br from-[#0a7a1d] to-[#0a7a1d]",
+      path: "/tools/ecologia",
     },
   ]
 
