@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Card } from "../components/ui/card"
-import { PieChart, ArrowUpDown, BarChart3, Wallet, Sparkles, ChevronRight, TrendingUp, ArchiveRestore, ArrowDownUp, Landmark } from "lucide-react"
+import { PieChart, ArrowUpDown, BarChart3, Wallet, Sparkles, ChevronRight, TrendingUp, ArchiveRestore, ArrowDownUp, Landmark, BatteryFull } from "lucide-react"
 
 export default function ToolsPage() {
   const [activeCard, setActiveCard] = useState<string | null>(null)
@@ -55,7 +55,7 @@ export default function ToolsPage() {
       name: "Split",
       description: "Divide dinero entre usuarios o cuentas",
       icon: ArrowDownUp,
-      color: "bg-gradient-to-br from-[#CA43210] to-[#B39240]",
+      color: "bg-gradient-to-br from-[#42f55d] to-[#42f55d]",
       path: "/tools/split",
     },
     {
@@ -63,8 +63,16 @@ export default function ToolsPage() {
       name: "Exchange",
       description: "Invierte en los mejores activos financieros y realiza cambio de divisas sobre tu dinero",
       icon: Landmark,
-      color: "bg-gradient-to-br from-[#AD2950] to-[#AD29140]",
+      color: "bg-gradient-to-br from-[#AD2950] to-[#AD2950]",
       path: "/tools/exchange",
+    },
+    {
+      id: "promociones",
+      name: "Promociones",
+      description: "Consigue descuentos y promociones en tus compras",
+      icon: BatteryFull,
+      color: "bg-gradient-to-br from-[#9542F5] to-[#9542F5]",
+      path: "/tools/promociones",
     },
   ]
 
